@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		function newElement()
+		{
+			var li = document.createElement("li");
+			var inputValue = document.getElementById("myInput").value;
+			var t = document.createTextNode(inputValue);
+			li.appendChild(t);
+			if (inputValue === '') 
+			{
+    			alert("You must write something!");
+    		} 
+    		else 
+    		{
+    			document.getElementById("myUL").appendChild(li);
+  			}		
+ 			
+ 			
+
+		}
+
+		
+ 
+	</script>
+	 <div id="myDIV">
+  		<h2>My To Do List</h2>
+  		<input type="text" id="myInput" placeholder="Title...">
+  		<Button onclick="newElement()" >Añadir</Button>
+  
+	</div>
+
+	<ul id="myUL">
+  
+	</ul> 
+</body>
+</html>
